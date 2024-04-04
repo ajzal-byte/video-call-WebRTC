@@ -42,7 +42,7 @@ const VideoPlayer = () => {
         </StyledPaper>
       )}
 
-      {callAccepted && callEnded && (
+      {callAccepted && !callEnded && (
         <StyledPaper>
           <StyledGrid item xs={12} md={6}>
             <Typography variant="h5" gutterBottom>
