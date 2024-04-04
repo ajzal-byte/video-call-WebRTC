@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
 import { io } from "socket.io-client";
-import { Peer } from "vite-compatible-simple-peer";
+import Peer from "simple-peer";
 import { toast } from "react-hot-toast";
 
 const SocketContext = createContext();
