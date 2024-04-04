@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
 import { io } from "socket.io-client";
-import Peer from "simple-peer";
+import { Peer } from "vite-compatible-simple-peer";
 import { toast } from "react-hot-toast";
 
 const SocketContext = createContext();
@@ -55,7 +55,9 @@ const ContextProvider = ({ children }) => {
   };
 
   const callUser = (id) => {
+    console.log("here");
     const peer = new Peer({ initiator: true, trickle: false, stream });
+    console.log("here1");
 
     peer.on("signal", (data) => {
       socket.emit("calluser", {

@@ -115,9 +115,8 @@ const Options = ({ children }) => {
               </Grid>
             </GridContainer>
           </form>
-        </PaperWrapper>
-        Options
         {children}
+        </PaperWrapper>
       </ContainerWrapper>
     </Root>
   );
