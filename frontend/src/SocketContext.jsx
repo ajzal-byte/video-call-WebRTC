@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
 import { io } from "socket.io-client";
 import Peer from "simple-peer";
-import { toast } from "react-hot-toast";
 
 const SocketContext = createContext();
 
@@ -28,7 +27,6 @@ const ContextProvider = ({ children }) => {
 
         myVideo.current.srcObject = currentStream;
       })
-      .catch(() => toast.error("Turn on your video and audio to continue"));
 
     socket.on("me", (id) => setMe(id));
 
