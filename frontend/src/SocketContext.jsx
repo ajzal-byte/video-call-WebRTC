@@ -20,6 +20,9 @@ const ContextProvider = ({ children }) => {
   const connectionRef = useRef();
 
   useEffect(() => {
+    if (stream) {
+      stream.getTracks().forEach((track) => track.stop());
+    }
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })
       .then((currentStream) => {
