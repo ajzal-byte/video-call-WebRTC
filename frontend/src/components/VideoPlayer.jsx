@@ -5,7 +5,6 @@ import { useContext } from "react";
 
 const StyledVideo = styled("video")(({ theme }) => ({
   width: "550px",
-  border: "1px solid red", // Add this line to see the border
 
   [theme.breakpoints.down("xs")]: {
     width: "300px",
